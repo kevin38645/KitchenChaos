@@ -11,6 +11,33 @@ public class Player : MonoBehaviour
     private bool isWalking;
     private Vector3 lastInteractDir;
 
+    private void Start() {
+        // Player is a listener.
+        // Add a event into publisher. 
+        gameInput.OnInteractAction += GameInput_OnInteractAction;    
+    }
+
+    private void GameInput_OnInteractAction(object sender, System.EventArgs e) {
+        Vector2 inputVector = gameInput.GetMovementVectorNormlized();
+
+        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+
+        if (moveDir != Vector3.zero) {
+            lastInteractDir = moveDir;
+        }
+
+        float interactDistance = 2f;
+
+        Debug.DrawRay(transform.position, lastInteractDir * interactDistance, Color.red);
+
+        if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask)) {
+            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)) {
+                // Has Counter
+                clearCounter.Interact();
+            }
+        }
+    }
+
     private void Update() {
         HandleMovement();
         HandleIntractions();
@@ -32,11 +59,11 @@ public class Player : MonoBehaviour
         float interactDistance = 2f;
 
         Debug.DrawRay(transform.position, lastInteractDir * interactDistance, Color.red);
-
+        
         if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask)) {
             if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)){
                 // Has Counter
-                clearCounter.Interact();
+                //clearCounter.Interact();
             }
         }
     }
@@ -93,5 +120,4 @@ public class Player : MonoBehaviour
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
-
 }
