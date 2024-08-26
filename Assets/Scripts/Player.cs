@@ -15,7 +15,45 @@ public class Player : MonoBehaviour
         Vector2 inputVector = gameInput.GetMovementVectorNormlized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+
+        float playerRadius = 0.65f;
+        float playerHeight = 1.4f;
+        Vector3 capsultStart = transform.position;
+        Vector3 capsultEnd = capsultStart + Vector3.up * playerHeight;
+        float moveDistance = moveSpeed * Time.deltaTime;
+
+
+        // oneline RayCast can't detect precisely, using other shape to better perform it.
+        bool canMove = !Physics.CapsuleCast(capsultStart, capsultEnd, playerRadius, moveDir, moveDistance);
+
+        if (!canMove) {
+            //Cannot move towards moveDir
+
+            //Attempt only X movement
+            Vector3 moveDirX = new Vector3(moveDir.x, 0, 0);
+            canMove = !Physics.CapsuleCast(transform.position, capsultEnd, playerRadius, moveDirX, moveDistance);
+
+            if (canMove)
+            {
+                moveDir = moveDirX;
+            } else {
+                //Attempt only Z movement
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z);
+                canMove = !Physics.CapsuleCast(transform.position, capsultEnd, playerRadius, moveDirZ, moveDistance);
+
+                if (canMove) {
+                    moveDir = moveDirZ;
+                } else {
+                    //Cannot move in any direction
+                    canMove = false;
+                }
+            }
+        }
+
+        if (canMove) {
+            transform.position += moveDir * moveDistance;
+        }
 
         isWalking = (moveDir != Vector3.zero); 
         //Way to look at one side
