@@ -132,6 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
         type: 3}
+      propertyPath: istesting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
+        type: 3}
       propertyPath: tomatoPrefab
       value: 
       objectReference: {fileID: 8346352711238076037, guid: 969c71cb2c761d7408bf4f606955f845,
@@ -316,6 +321,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
+        type: 3}
+      propertyPath: istesting
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
         type: 3}
       propertyPath: tomatoPrefab
@@ -554,6 +564,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &376050521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
+    type: 3}
+  m_PrefabInstance: {fileID: 61283340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef14c0249da00a4584414b35fb4ea54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1041,37 @@ MonoBehaviour:
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1 &1776906344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1776906345}
+  m_Layer: 0
+  m_Name: kitchenObjectHoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1776906345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776906344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.046, z: 1.138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1393575725423874465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895054261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1161,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   gameInput: {fileID: 7086094297471079359}
+  kitchenObjectHoldPoint: {fileID: 0}
 --- !u!95 &770634942731469732
 Animator:
   serializedVersion: 5
@@ -1150,12 +1204,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3913751503651658312}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5893092, y: 0, z: -0.31202435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5616701673439170990}
+  - {fileID: 1776906345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1416181858304661489
@@ -1172,6 +1227,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 95d00f8024606704591782d9fc6d4e29,
         type: 2}
+    - target: {fileID: 4025341286585333873, guid: ba433e0c68a4046498ac93c47e311a78,
+        type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 376050521}
     - target: {fileID: 4373717773912517852, guid: ba433e0c68a4046498ac93c47e311a78,
         type: 3}
       propertyPath: m_LocalPosition.x
