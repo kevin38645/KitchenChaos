@@ -7,6 +7,7 @@ public class GameInput : MonoBehaviour
 {
     // GameInput is a Publisher, press key, trigger event, other listeners will run function.
     public event EventHandler OnInteractAction;
+    public event EventHandler OnInteractAlternateAction;
 
     private PlayerInputActions playerInputActions;
 
@@ -16,6 +17,11 @@ public class GameInput : MonoBehaviour
 
         //Initialize a new event (Interact_performed), when player press key.
         playerInputActions.Player.Interact.performed += Interact_performed;
+        playerInputActions.Player.InteractAlternate.performed += InteractAlternate_performed;
+    }
+
+    private void InteractAlternate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
     }
 
     private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
