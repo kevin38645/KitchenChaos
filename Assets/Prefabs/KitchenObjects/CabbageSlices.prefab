@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8346352711238076037}
   - component: {fileID: -6532462501141487091}
   m_Layer: 0
-  m_Name: TomatoSlices
+  m_Name: CabbageSlices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2589757843175529013}
+  - {fileID: 4330120278926648821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-6532462501141487091
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4398a5039108d8349b9645482139620f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: 869cf2794dde92549a44def885fea3da, type: 2}
---- !u!1001 &1664823343099595957
+  kitchenObjectSO: {fileID: 11400000, guid: 5b9e94a0fb6eebf46854958a5bdcb20a, type: 2}
+--- !u!1001 &647852560507204469
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -54,69 +54,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8346352711238076037}
     m_Modifications:
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3812876574508226177, guid: fb403d1efda6baf4190c507841617408,
+    - target: {fileID: 3812876574508226177, guid: 44b7e90f95929c04c8394768d8bd1d14,
         type: 3}
       propertyPath: m_Name
-      value: TomatoSlices_Visual
+      value: CabbageSliced_Visual
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb403d1efda6baf4190c507841617408, type: 3}
---- !u!4 &2589757843175529013 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 44b7e90f95929c04c8394768d8bd1d14, type: 3}
+--- !u!4 &4330120278926648821 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3812876574508226176, guid: fb403d1efda6baf4190c507841617408,
+  m_CorrespondingSourceObject: {fileID: 3812876574508226176, guid: 44b7e90f95929c04c8394768d8bd1d14,
     type: 3}
-  m_PrefabInstance: {fileID: 1664823343099595957}
+  m_PrefabInstance: {fileID: 647852560507204469}
   m_PrefabAsset: {fileID: 0}

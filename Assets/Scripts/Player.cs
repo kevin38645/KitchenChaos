@@ -76,8 +76,6 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
         float interactDistance = 2f;
 
-        Debug.DrawRay(transform.position, lastInteractDir * interactDistance, Color.red);
-        
         if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask)) {
             if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter)){
                 // Has Counter
