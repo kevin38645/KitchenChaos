@@ -16,7 +16,6 @@ public class PlatesCounter : BaseCounter
 
     private void Update() {
         spawnPlateTimer += Time.deltaTime;
-        Debug.Log(spawnPlateTimer);
         if (spawnPlateTimer > spawnPlateTimerMax) {
             spawnPlateTimer = 0f;
 

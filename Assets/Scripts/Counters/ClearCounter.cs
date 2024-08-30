@@ -42,8 +42,5 @@ public class ClearCounter : BaseCounter
             }
 
         }
-
     }
-
-
 }
