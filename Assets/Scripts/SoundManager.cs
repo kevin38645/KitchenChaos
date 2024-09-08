@@ -64,8 +64,8 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplier * volume);
     }
 
-    public void PlayFootstepsSound(Vector3 position, float volumeMultiplier) {
-        PlaySound(audioClipRefsSO.footstep, position, volumeMultiplier * volume); 
+    public void PlayCountdownSound() {
+        PlaySound(audioClipRefsSO.warning, Vector3.zero); 
     }
 
     public void ChangeVolume() {
